@@ -15,9 +15,7 @@
     margin: 0 calc(50% - 300px);
     
 }
-.bg-blue {
-    background-color: #03a7f2;
-}
+
 
 @media (max-width: 1100px) {
     .container > .row {
