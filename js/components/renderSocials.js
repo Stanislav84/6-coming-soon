@@ -1,5 +1,11 @@
-function renderSocials(data) {
+function renderSocials(selector, data) {
     //validation
+    if (typeof selector !== 'string') {
+      return console.error('ERROR: selector turi but string tipo,');
+    }
+    if (selector === '') {
+      return console.error('ERROR: selector negali buti tuscias tekstas.');
+    }
       if (!Array.isArray(data)) {
           return console.error('ERROR: duomenis turi buti array tipo.');
       }
@@ -11,7 +17,11 @@ function renderSocials(data) {
 
     //logic
 
-    const DOM = document.querySelector('footer > .socials');
+    const DOM = document.querySelector(selector);
+    if (!DOM) {
+      return console.error('ERROR: pagal pateikta selektoriu nepavyko rasti norimo elemento.');
+    }
+
      let HTML = '';
 
        for (let i = 0; i < count; i++) {  
@@ -24,6 +34,7 @@ function renderSocials(data) {
         typeof item.href !== 'string' ||
         !item.icon ||
         typeof item.icon !== 'string') {
+          console.warn('WARNING: rastas netinkamo formato irasas.', item);
           continue;
         }
 

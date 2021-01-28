@@ -2,6 +2,10 @@
 import {renderSocials} from './components/renderSocials.js';
 import { socialsData } from './data/socialsData.js';
 
-const socialsHTML = renderSocials(socialsData);
+import { renderProgressBars } from './components/renderProgressBars.js';
+import { progressBarData } from './data/progressBarData.js';
+
+renderProgressBars('.left-column', progressBarData);
+renderSocials('footer > .socials',socialsData);
 
 
