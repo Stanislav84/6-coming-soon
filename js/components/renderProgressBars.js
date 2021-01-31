@@ -8,7 +8,7 @@ function renderProgressBars(selector, data) {
          console.error('ERROR: netinkamo formato selector parametras.');
          return false;
      }
-     if (Array.isArray(data) || 
+     if (!Array.isArray(data) || 
       data.length === 0) {
          console.error('ERROR: netinkamo formato data parametras.');
          return false;
@@ -24,7 +24,7 @@ function renderProgressBars(selector, data) {
 
    for (let i = 0; i < data.length; i++) {
        const item = data[i];
-       const formatedValue = formatNumber(item.value);
+       const formatedValue = formatNumber(item.value, 0);
 
        // objekto validacija
        if (typeof item !== 'object' ||
@@ -43,7 +43,7 @@ function renderProgressBars(selector, data) {
        HTML += `<div class="progress-bar">
                 <div class="top">
                      <div class="label">${item.label}</div>
-                     <div class="value">${formatNumber(item.value)}%</div>
+                     <div class="value">${formatedValue}%</div>
                 </div>
                 <div class="bottom">
                  <div class="progress" style="width: ${item.value}%;">

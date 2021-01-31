@@ -6,6 +6,6 @@ import { renderProgressBars } from './components/renderProgressBars.js';
 import { progressBarData } from './data/progressBarData.js';
 
 renderProgressBars('.left-column', progressBarData);
-renderSocials('footer > .socials',socialsData);
+renderSocials('footer > .socials', socialsData);
 
 

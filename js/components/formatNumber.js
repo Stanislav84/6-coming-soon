@@ -8,7 +8,7 @@ if (typeof positions !== 'number' ||
 !isFinite(positions) ||
      positions % 1 !== 0 ||
      positions < 0 ||
-     position > 10) {
+     positions > 10) {
     console.error('ERROR: antrasis parametras turi buti tikras skaicius.');
     return false;
  }
