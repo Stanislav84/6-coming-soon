@@ -42,8 +42,8 @@ function renderSocials(selector, data) {
         
 }
    //post logic validation
-if (HTML === '') {
-  return console.error('ERROR:duomenu sarase nerasta nei vieno normalaus objekto.');
+    if (HTML === '') {
+     return console.error('ERROR:duomenu sarase nerasta nei vieno normalaus objekto.');
 }
 
 
